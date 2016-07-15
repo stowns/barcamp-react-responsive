@@ -5,8 +5,7 @@ import ResponsiveComponent from './ResponsiveComponent';
 import flux from './flux';
 import connectToStores from 'alt-utils/lib/connectToStores';
 
-@connectToStores
-export default class Example extends ResponsiveComponent {
+class Example extends ResponsiveComponent {
 
   static getStores() {
     return [flux.stores.app];
@@ -32,3 +31,5 @@ export default class Example extends ResponsiveComponent {
     )
   }
 }
+
+export default connectToStores(Example)

@@ -21,6 +21,10 @@ class AppStore {
     this.monitorWindowSize = false;
     this.windowSize = 'lg';
   }
+  
+  setCurrentWindowSize(value) {
+    this.currentWindowSize = value;
+  }
 
   setMonitorWindowSize(value) {
     this.monitorWindowSize = value;
@@ -28,9 +32,6 @@ class AppStore {
 
   setWindowSize(value) {
     this.windowSize = value;
-
-    // update the main app's layout based on sub-app needs
-    this.updateMainLayout()
   }
 }
 

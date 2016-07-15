@@ -5,27 +5,29 @@ import Example from './Example';
 import flux from './flux';
 import connectToStores from 'alt-utils/lib/connectToStores';
 
-@connectToStores
-export default class App extends Component {
-
-  static componentDidConnect(props) {
+class App extends Component {
+  
+  static componentDidConnect() {
     flux.actions.app.monitorWindowSize(true);
   }
 
-  static getStores() {
+  static getStores(props) {
+    console.log('get stores')
     return [flux.stores.app];
   }
 
-  static getPropsFromStores() {
+  static getPropsFromStores(props) {
     let appState = flux.stores.app.getState();
 
     return {
-      monitorWindowSize: appState.monitorWindowSize
+      monitorWindowSize: appState.monitorWindowSize,
+      windowSize: appState.windowSize
     };
   }
 
   componentDidMount() {
-    let test = "test";
+    console.log(JSON.stringify(flux.actions.app));
+    console.log('app mounted')
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,6 +37,7 @@ export default class App extends Component {
   }
 
   setWindowSizeListeners(enabled) {
+    console.log(`setWindowSizeListeners ${enabled}`)
     if (!enabled) {
       return $(window).off("resize");
     }
@@ -56,7 +59,8 @@ export default class App extends Component {
   }
 
   updateWindowSize(size) {
-    if (size !== this.state.currentWindowSize) {
+    if (size !== this.props.windowSize) {
+      console.log(`updateWindowSize ${size}`)
       flux.actions.app.setWindowSize(size);
     }
   }
@@ -71,3 +75,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default connectToStores(App)
