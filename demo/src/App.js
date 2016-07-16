@@ -71,7 +71,7 @@ class App extends Component {
 
   render() {
     let style = {
-      marginTop: 50
+      marginTop: 100
     };
     
     return (
