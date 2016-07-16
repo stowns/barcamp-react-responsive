@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Example from './Example';
-
+import Example2 from './Example2';
 /* flux */
 import flux from './flux';
 import connectToStores from 'alt-utils/lib/connectToStores';
@@ -71,7 +71,10 @@ class App extends Component {
 
   render() {
     return (
-      <Example />
+      <div>
+        <Example />
+        <Example2 />
+      </div>
     );
   }
 }

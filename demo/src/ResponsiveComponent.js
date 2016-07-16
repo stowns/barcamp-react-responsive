@@ -1,6 +1,7 @@
 'use strict';
 
 import React, {Component} from 'react';
+import _ from 'lodash';
 
 const methodMap = {
   xs: 'ExtraSmall',
