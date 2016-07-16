@@ -21,13 +21,17 @@ class Example extends ResponsiveComponent {
 
   renderMobile() {
     return (
-      <div>Mobile</div>
+      <div className="my-class">
+        <h1>Mobile</h1>
+      </div>
     )
   }
 
   renderDesktop() {
     return (
-      <div>Desktop</div>
+      <div className="my-class">
+        <h1>Desktop</h1>
+      </div>
     )
   }
 }

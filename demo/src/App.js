@@ -70,8 +70,12 @@ class App extends Component {
   }
 
   render() {
+    let style = {
+      marginTop: 50
+    };
+    
     return (
-      <div>
+      <div style={style} className='text-center'>
         <Example />
         <Example2 />
       </div>

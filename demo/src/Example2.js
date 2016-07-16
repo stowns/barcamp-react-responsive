@@ -21,7 +21,7 @@ class Example2 extends ResponsiveComponent {
   
   renderExtraSmall() {
     return (
-      <div>
+      <div className="my-class-3">
         <div>Extra Small</div>
       </div>
     )
@@ -29,7 +29,7 @@ class Example2 extends ResponsiveComponent {
 
   renderSmall() {
     return (
-      <div>
+      <div className="my-class-2">
         <div>Small</div>
       </div>
     )
@@ -37,7 +37,7 @@ class Example2 extends ResponsiveComponent {
 
   renderDesktop() {
     return (
-      <div>
+      <div className="my-class">
         <div>Desktop</div>
       </div>
     )
