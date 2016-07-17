@@ -76,7 +76,6 @@ class App extends Component {
     
     return (
       <div style={style} className='text-center'>
-        <Example />
         <Example2 />
       </div>
     );

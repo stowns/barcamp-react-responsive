@@ -31,6 +31,7 @@ class Example2 extends ResponsiveComponent {
     return (
       <div className="my-class-2">
         <div>Small</div>
+        <div>less stuff</div>
       </div>
     )
   }
@@ -39,6 +40,9 @@ class Example2 extends ResponsiveComponent {
     return (
       <div className="my-class">
         <div>Desktop</div>
+        <div>All the stuff</div>
+        <div>that bigger screens</div>
+        <div>can have</div>
       </div>
     )
   }
